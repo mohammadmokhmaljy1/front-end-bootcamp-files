@@ -36,26 +36,26 @@ git pull
 
 | الجلسة | الموضوع | المجلد |
 |---|---|---|
-| 01 | بنية الصفحة وتنسيقات الخط | `01-page-structure-text-formatting` |
-| 02 | الروابط التشعبية | `02-hyperlinks` |
-| 03 | القوائم والجداول | `03-lists-and-tables` |
-| 04 | الوسائط المتعددة | `04-multimedia` |
-| 05 | النماذج وتفاصيلها | `05-forms` |
-| 06 | أقسام الصفحة والوسوم الإضافية | `06-page-sections-and-extra-tags` |
-| 07 | مدخل إلى CSS وتفاصيلها | `07-css-intro` |
-| 08 | الهوامش والحشوة وبعض الخصائص | `08-margin-padding-and-properties` |
-| 09 | المحددات الزائفة مع الجدول | `09-pseudo-selectors-with-tables` |
-| 10 | الصندوق المرن في Tailwind | `10-tailwind-flexbox` |
-| 11 | Tailwind في Position | `11-tailwind-position` |
-| 12 | Tailwind في Animation | `12-tailwind-animation` |
-| 13 | Tailwind في Media Query | `13-tailwind-media-query` |
-| 14-16 | مشروع من Figma (عدة صفحات) | `14-16-figma-multipage-project` |
-| 17 | مدخل إلى JS | `17-js-intro` |
-| 18 | الحلقات والقوائم في JS | `18-js-loops-and-arrays` |
-| 19 | DOM | `19-js-dom` |
-| 20 | RegEx | `20-js-regex` |
-| 21 | Timers | `21-js-timers` |
-| 22 | GetAll (تحديد عدة عناصر) | `22-js-get-all-elements` |
-| 23 | مدخل إلى API | `23-js-api-intro` |
-| 24 | طلب البيانات | `24-js-fetch-data` |
-| 25 | إرسال البيانات | `25-js-send-data` |
+| 01 | بنية الصفحة وتنسيقات الخط | `HTML/01-page-structure-text-formatting` |
+| 02 | الروابط التشعبية | `HTML/02-hyperlinks` |
+| 03 | القوائم والجداول | `HTML/03-lists-and-tables` |
+| 04 | الوسائط المتعددة | `HTML/04-multimedia` |
+| 05 | النماذج وتفاصيلها | `HTML/05-forms` |
+| 06 | أقسام الصفحة والوسوم الإضافية | `HTML/06-page-sections-and-extra-tags` |
+| 07 | مدخل إلى CSS وتفاصيلها | `CSS/07-css-intro` |
+| 08 | الهوامش والحشوة وبعض الخصائص | `CSS/08-margin-padding-and-properties` |
+| 09 | المحددات الزائفة مع الجدول | `CSS/09-pseudo-selectors-with-tables` |
+| 10 | الصندوق المرن في Tailwind | `CSS/10-tailwind-flexbox` |
+| 11 | Tailwind في Position | `CSS/11-tailwind-position` |
+| 12 | Tailwind في Animation | `CSS/12-tailwind-animation` |
+| 13 | Tailwind في Media Query | `CSS/13-tailwind-media-query` |
+| 14-16 | مشروع من Figma (عدة صفحات) | `CSS/14-16-figma-multipage-project` |
+| 17 | مدخل إلى JS | `JS/17-js-intro` |
+| 18 | الحلقات والقوائم في JS | `JS/18-js-loops-and-arrays` |
+| 19 | DOM | `JS/19-js-dom` |
+| 20 | RegEx | `JS/20-js-regex` |
+| 21 | Timers | `JS/21-js-timers` |
+| 22 | GetAll (تحديد عدة عناصر) | `JS/22-js-get-all-elements` |
+| 23 | مدخل إلى API | `JS/23-js-api-intro` |
+| 24 | طلب البيانات | `JS/24-js-fetch-data` |
+| 25 | إرسال البيانات | `JS/25-js-send-data` |
