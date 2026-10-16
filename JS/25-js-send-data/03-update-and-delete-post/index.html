@@ -4,33 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>تعديل وحذف مقال (PUT / PATCH / DELETE)</title>
-  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- Tailwind عبر CDN: مناسب للتعلّم والتجربة فقط -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
   <script src="script.js" defer></script>
 </head>
-<body>
-  <main class="container">
-    <header class="page-head">
-      <span class="badge">الدرس 25 · التمرين 3</span>
-      <h1>تعديل وحذف مقال (PUT / PATCH / DELETE)</h1>
-      <p class="goal">التعرّف على طرق HTTP: GET و PUT و PATCH و DELETE.</p>
+<body class="bg-slate-100 text-slate-800">
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-16">
+    <header class="mb-5">
+      <span class="inline-block bg-blue-600 text-white text-xs px-3 py-0.5 rounded-full">الدرس 25 · التمرين 3</span>
+      <h1 class="text-2xl font-bold mt-2 mb-1">تعديل وحذف مقال (PUT / PATCH / DELETE)</h1>
+      <p class="text-slate-500">التعرّف على طرق HTTP: GET و PUT و PATCH و DELETE.</p>
     </header>
 
-    <div class="card">
-      <label for="editTitle">العنوان</label>
-      <input type="text" id="editTitle">
-      <label for="editBody">المحتوى</label>
-      <textarea id="editBody"></textarea>
-      <div class="row">
-        <button id="loadBtn" class="btn-primary">تحميل (GET)</button>
-        <button id="updateBtn">تعديل كامل (PUT)</button>
-        <button id="patchBtn">تعديل العنوان (PATCH)</button>
-        <button id="deleteBtn" class="btn-danger">حذف (DELETE)</button>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4">
+      <label for="editTitle" class="block font-semibold mb-1">العنوان</label>
+      <input type="text" id="editTitle" class="w-full px-3 py-2 rounded-lg border border-slate-300 bg-white focus:outline-2 focus:outline-blue-600">
+      <label for="editBody" class="block font-semibold mt-3 mb-1">المحتوى</label>
+      <textarea id="editBody" class="w-full px-3 py-2 rounded-lg border border-slate-300 bg-white focus:outline-2 focus:outline-blue-600 min-h-28"></textarea>
+      <div class="flex flex-wrap items-center gap-2 mt-3">
+        <button id="loadBtn" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">تحميل (GET)</button>
+        <button id="updateBtn" class="px-4 py-2 rounded-lg border border-slate-300 bg-white hover:border-blue-600 hover:text-blue-600 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">تعديل كامل (PUT)</button>
+        <button id="patchBtn" class="px-4 py-2 rounded-lg border border-slate-300 bg-white hover:border-blue-600 hover:text-blue-600 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">تعديل العنوان (PATCH)</button>
+        <button id="deleteBtn" class="px-4 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700 transition cursor-pointer">حذف (DELETE)</button>
       </div>
     </div>
-    <div class="card">
-      <h2>سجل الطلبات</h2>
-      <pre id="log" class="output">...</pre>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4">
+      <h2 class="text-lg font-bold mb-3">سجل الطلبات</h2>
+      <pre id="log" dir="ltr" class="bg-slate-900 text-green-200 p-4 rounded-xl min-h-20 whitespace-pre-wrap font-mono text-sm text-left overflow-auto">...</pre>
     </div>
   </main>
 </body>

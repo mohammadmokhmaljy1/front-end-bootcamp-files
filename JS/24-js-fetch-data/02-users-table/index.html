@@ -4,29 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>جدول المستخدمين من API</title>
-  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- Tailwind عبر CDN: مناسب للتعلّم والتجربة فقط -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
   <script src="script.js" defer></script>
 </head>
-<body>
-  <main class="container">
-    <header class="page-head">
-      <span class="badge">الدرس 24 · التمرين 2</span>
-      <h1>جدول المستخدمين من API</h1>
-      <p class="goal">تعبئة جدول HTML من بيانات قادمة من الخادم.</p>
+<body class="bg-slate-100 text-slate-800">
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-16">
+    <header class="mb-5">
+      <span class="inline-block bg-blue-600 text-white text-xs px-3 py-0.5 rounded-full">الدرس 24 · التمرين 2</span>
+      <h1 class="text-2xl font-bold mt-2 mb-1">جدول المستخدمين من API</h1>
+      <p class="text-slate-500">تعبئة جدول HTML من بيانات قادمة من الخادم.</p>
     </header>
 
-    <div class="card">
-      <div class="row">
-        <button id="loadUsersBtn" class="btn-primary">تحميل المستخدمين</button>
-        <span id="count" class="muted small"></span>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4">
+      <div class="flex flex-wrap items-center gap-2">
+        <button id="loadUsersBtn" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">تحميل المستخدمين</button>
+        <span id="count" class="text-slate-500 text-sm"></span>
       </div>
-      <table id="usersTable">
-        <thead>
-          <tr><th>#</th><th>الاسم</th><th>البريد</th><th>المدينة</th><th>الشركة</th></tr>
-        </thead>
-        <tbody id="usersBody"></tbody>
-      </table>
+      <div class="overflow-x-auto mt-4">
+        <table id="usersTable" class="w-full text-start">
+          <thead class="bg-slate-100">
+            <tr>
+              <th class="px-3 py-2 text-start">#</th>
+              <th class="px-3 py-2 text-start">الاسم</th>
+              <th class="px-3 py-2 text-start">البريد</th>
+              <th class="px-3 py-2 text-start">المدينة</th>
+              <th class="px-3 py-2 text-start">الشركة</th>
+            </tr>
+          </thead>
+          <tbody id="usersBody"></tbody>
+        </table>
+      </div>
     </div>
   </main>
 </body>

@@ -4,24 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>أول طلب fetch باستخدام then</title>
-  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- Tailwind عبر CDN: مناسب للتعلّم والتجربة فقط -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
   <script src="script.js" defer></script>
 </head>
-<body>
-  <main class="container">
-    <header class="page-head">
-      <span class="badge">الدرس 23 · التمرين 2</span>
-      <h1>أول طلب fetch باستخدام then</h1>
-      <p class="goal">جلب بيانات من API وعرضها.</p>
+<body class="bg-slate-100 text-slate-800">
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-16">
+    <header class="mb-5">
+      <span class="inline-block bg-blue-600 text-white text-xs px-3 py-0.5 rounded-full">الدرس 23 · التمرين 2</span>
+      <h1 class="text-2xl font-bold mt-2 mb-1">أول طلب fetch باستخدام then</h1>
+      <p class="text-slate-500">جلب بيانات من API وعرضها.</p>
     </header>
 
-    <div class="card">
-      <p class="muted small">الرابط: <code>https://jsonplaceholder.typicode.com/posts/1</code></p>
-      <div class="row">
-        <button id="fetchBtn" class="btn-primary">جلب البيانات</button>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4">
+      <p class="text-slate-500 text-sm">الرابط: <code dir="ltr" class="bg-slate-100 px-1.5 rounded">https://jsonplaceholder.typicode.com/posts/1</code></p>
+      <div class="flex flex-wrap items-center gap-2 mt-3">
+        <button id="fetchBtn" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">جلب البيانات</button>
       </div>
-      <pre id="output" class="output">لم يتم جلب أي بيانات بعد.</pre>
+      <pre id="output" dir="ltr" class="bg-slate-900 text-green-200 p-4 rounded-xl min-h-20 whitespace-pre-wrap font-mono text-sm text-left overflow-auto mt-3">لم يتم جلب أي بيانات بعد.</pre>
     </div>
   </main>
 </body>

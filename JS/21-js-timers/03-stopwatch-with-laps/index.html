@@ -4,27 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ساعة إيقاف مع اللفّات</title>
-  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- Tailwind عبر CDN: مناسب للتعلّم والتجربة فقط -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
   <script src="script.js" defer></script>
 </head>
-<body>
-  <main class="container">
-    <header class="page-head">
-      <span class="badge">الدرس 21 · التمرين 3</span>
-      <h1>ساعة إيقاف مع اللفّات</h1>
-      <p class="goal">قياس الوقت وتسجيل لفّات باستخدام setInterval.</p>
+<body class="bg-slate-100 text-slate-800">
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-16">
+    <header class="mb-5">
+      <span class="inline-block bg-blue-600 text-white text-xs px-3 py-0.5 rounded-full">الدرس 21 · التمرين 3</span>
+      <h1 class="text-2xl font-bold mt-2 mb-1">ساعة إيقاف مع اللفّات</h1>
+      <p class="text-slate-500">قياس الوقت وتسجيل لفّات باستخدام setInterval.</p>
     </header>
 
-    <div class="card center">
-      <div id="display" class="clock">00:00.00</div>
-      <div class="row center">
-        <button id="startBtn" class="btn-primary">ابدأ</button>
-        <button id="stopBtn">إيقاف</button>
-        <button id="lapBtn">لفّة</button>
-        <button id="resetBtn" class="btn-ghost">إعادة</button>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4 text-center">
+      <div id="display" dir="ltr" class="font-mono text-6xl font-bold tracking-wider">00:00.00</div>
+      <div class="flex flex-wrap justify-center gap-2 mt-4">
+        <button id="startBtn" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">ابدأ</button>
+        <button id="stopBtn" class="px-4 py-2 rounded-lg border border-slate-300 bg-white hover:border-blue-600 hover:text-blue-600 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">إيقاف</button>
+        <button id="lapBtn" class="px-4 py-2 rounded-lg border border-slate-300 bg-white hover:border-blue-600 hover:text-blue-600 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">لفّة</button>
+        <button id="resetBtn" class="px-4 py-2 rounded-lg border border-slate-300 bg-white hover:border-blue-600 hover:text-blue-600 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">إعادة</button>
       </div>
-      <ol id="laps"></ol>
+      <ol id="laps" class="mt-4 list-decimal ps-6 text-start space-y-1"></ol>
     </div>
   </main>
 </body>

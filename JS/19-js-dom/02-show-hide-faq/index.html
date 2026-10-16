@@ -4,30 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>إظهار وإخفاء: الأسئلة الشائعة</title>
-  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- Tailwind عبر CDN: مناسب للتعلّم والتجربة فقط -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
   <script src="script.js" defer></script>
 </head>
-<body>
-  <main class="container">
-    <header class="page-head">
-      <span class="badge">الدرس 19 · التمرين 2</span>
-      <h1>إظهار وإخفاء: الأسئلة الشائعة</h1>
-      <p class="goal">التحكم بظهور العناصر عند الضغط على زر.</p>
+<body class="bg-slate-100 text-slate-800">
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-16">
+    <header class="mb-5">
+      <span class="inline-block bg-blue-600 text-white text-xs px-3 py-0.5 rounded-full">الدرس 19 · التمرين 2</span>
+      <h1 class="text-2xl font-bold mt-2 mb-1">إظهار وإخفاء: الأسئلة الشائعة</h1>
+      <p class="text-slate-500">التحكم بظهور العناصر عند الضغط على زر.</p>
     </header>
 
-    <div class="card">
-      <div class="faq-item">
-        <button class="faq-question" data-target="answer1">ما هي لغة HTML؟</button>
-        <p id="answer1" class="faq-answer hidden">لغة ترميز تبني هيكل صفحات الويب وعناصرها.</p>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4">
+      <div class="border border-slate-200 rounded-xl mb-2 overflow-hidden">
+        <button class="faq-question w-full text-start px-4 py-3 font-semibold bg-white hover:bg-slate-50 cursor-pointer" data-target="answer1">ما هي لغة HTML؟</button>
+        <p id="answer1" class="hidden px-4 pb-3 text-slate-500">لغة ترميز تبني هيكل صفحات الويب وعناصرها.</p>
       </div>
-      <div class="faq-item">
-        <button class="faq-question" data-target="answer2">ما الفرق بين CSS و JavaScript؟</button>
-        <p id="answer2" class="faq-answer hidden">CSS تنسّق شكل الصفحة، أما JavaScript فتضيف التفاعل والمنطق.</p>
+      <div class="border border-slate-200 rounded-xl mb-2 overflow-hidden">
+        <button class="faq-question w-full text-start px-4 py-3 font-semibold bg-white hover:bg-slate-50 cursor-pointer" data-target="answer2">ما الفرق بين CSS و JavaScript؟</button>
+        <p id="answer2" class="hidden px-4 pb-3 text-slate-500">CSS تنسّق شكل الصفحة، أما JavaScript فتضيف التفاعل والمنطق.</p>
       </div>
-      <div class="faq-item">
-        <button class="faq-question" data-target="answer3">هل أحتاج إلى حفظ كل الأكواد؟</button>
-        <p id="answer3" class="faq-answer hidden">لا، المهم فهم الأفكار والتدرّب كثيراً، والمراجع موجودة دائماً.</p>
+      <div class="border border-slate-200 rounded-xl overflow-hidden">
+        <button class="faq-question w-full text-start px-4 py-3 font-semibold bg-white hover:bg-slate-50 cursor-pointer" data-target="answer3">هل أحتاج إلى حفظ كل الأكواد؟</button>
+        <p id="answer3" class="hidden px-4 pb-3 text-slate-500">لا، المهم فهم الأفكار والتدرّب كثيراً، والمراجع موجودة دائماً.</p>
       </div>
     </div>
   </main>

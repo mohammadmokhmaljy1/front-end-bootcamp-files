@@ -4,7 +4,7 @@
 // المطلوب:
 // 1) اقرأ عدد الثواني من secondsInput عند الضغط على startBtn
 // 2) استخدم setInterval لإنقاص الثواني كل ثانية وعرضها في countdown بصيغة mm:ss
-// 3) عند الوصول إلى الصفر أوقف المؤقّت بـ clearInterval وأظهر finishMsg
+// 3) عند الوصول إلى الصفر أوقف المؤقّت بـ clearInterval وأظهر finishMsg (أزل الكلاس hidden)
 // 4) pauseBtn يوقف مؤقتاً و resetBtn يعيد القيمة الأولى
 // 5) امنع تشغيل أكثر من مؤقّت في نفس الوقت
 //

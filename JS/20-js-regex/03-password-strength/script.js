@@ -3,8 +3,8 @@
 // =====================================================
 // المطلوب:
 // 1) عند الكتابة في passwordInput (حدث input) اختبر الشروط الخمسة بتعابير نمطية مستقلة
-// 2) فعّل الكلاس valid على عناصر القائمة rule-length و rule-upper و rule-lower و rule-number و rule-symbol
-// 3) احسب عدد الشروط المحققة وحدّد عرض strengthBar ولونه
+// 2) عند تحقق الشرط غيّر لون عنصر القائمة rule-length و rule-upper و rule-lower و rule-number و rule-symbol من text-slate-500 إلى text-green-600 وغيّر الأيقونة من ✗ إلى ✓
+// 3) احسب عدد الشروط المحققة وحدّد عرض strengthBar (style.width) ولونه (bg-red-500 / bg-yellow-500 / bg-green-500)
 // 4) اكتب في strengthText: ضعيفة / متوسطة / قوية
 // 5) اجعل showPassword يبدّل نوع الحقل بين password و text
 //

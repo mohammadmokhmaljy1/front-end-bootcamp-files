@@ -6,7 +6,7 @@
 // 2) غيّر نص العنوان باستخدام textContent
 // 3) غيّر لون الصندوق وحجم الخط بـ element.style
 // 4) عند الضغط على changeTextBtn غيّر نص العنوان والوصف
-// 5) عند الضغط على changeStyleBtn بدّل بين الشكلين باستخدام classList.toggle (أنشئ كلاس في ملف CSS بنفسك)
+// 5) عند الضغط على changeStyleBtn بدّل بين شكلين للصندوق باستخدام classList.toggle مع كلاسات Tailwind مثل bg-emerald-500 و text-white و font-bold و scale-105
 // 6) عند الضغط على resetBtn أعد كل شيء كما كان
 //
 // اكتب الكود أسفل هذا السطر

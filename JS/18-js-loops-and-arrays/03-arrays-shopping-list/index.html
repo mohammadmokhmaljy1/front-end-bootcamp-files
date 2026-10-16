@@ -4,22 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>المصفوفات: قائمة مشتريات</title>
-  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- Tailwind عبر CDN: مناسب للتعلّم والتجربة فقط -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
   <script src="script.js" defer></script>
 </head>
-<body>
-  <main class="container">
-    <header class="page-head">
-      <span class="badge">الدرس 18 · التمرين 3</span>
-      <h1>المصفوفات: قائمة مشتريات</h1>
-      <p class="goal">إنشاء المصفوفات والتعامل مع عناصرها.</p>
+<body class="bg-slate-100 text-slate-800">
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-16">
+    <header class="mb-5">
+      <span class="inline-block bg-blue-600 text-white text-xs px-3 py-0.5 rounded-full">الدرس 18 · التمرين 3</span>
+      <h1 class="text-2xl font-bold mt-2 mb-1">المصفوفات: قائمة مشتريات</h1>
+      <p class="text-slate-500">إنشاء المصفوفات والتعامل مع عناصرها.</p>
     </header>
 
-    <p class="hint">افتح الـ Console بالضغط على <code>F12</code> ثم اختر تبويب <b>Console</b> لمشاهدة النتائج.</p>
-    <div class="card">
-      <h2>النتيجة (اختياري)</h2>
-      <pre id="output" class="output">...</pre>
+    <p class="bg-amber-50 border border-amber-200 text-amber-900 rounded-lg px-3 py-2 text-sm mb-4">افتح الـ Console بالضغط على <code dir="ltr" class="bg-amber-100 px-1.5 rounded">F12</code> ثم اختر تبويب <b>Console</b> لمشاهدة النتائج.</p>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4">
+      <h2 class="text-lg font-bold mb-3">النتيجة (اختياري)</h2>
+      <pre id="output" dir="ltr" class="bg-slate-900 text-green-200 p-4 rounded-xl min-h-20 whitespace-pre-wrap font-mono text-sm text-left overflow-auto">...</pre>
     </div>
   </main>
 </body>

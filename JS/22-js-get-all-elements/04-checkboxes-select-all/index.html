@@ -4,31 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>تحديد الكل وعدّ المحدَّد</title>
-  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- Tailwind عبر CDN: مناسب للتعلّم والتجربة فقط -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
   <script src="script.js" defer></script>
 </head>
-<body>
-  <main class="container">
-    <header class="page-head">
-      <span class="badge">الدرس 22 · التمرين 4</span>
-      <h1>تحديد الكل وعدّ المحدَّد</h1>
-      <p class="goal">التعامل مع مجموعة مربعات اختيار (checkbox).</p>
+<body class="bg-slate-100 text-slate-800">
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-16">
+    <header class="mb-5">
+      <span class="inline-block bg-blue-600 text-white text-xs px-3 py-0.5 rounded-full">الدرس 22 · التمرين 4</span>
+      <h1 class="text-2xl font-bold mt-2 mb-1">تحديد الكل وعدّ المحدَّد</h1>
+      <p class="text-slate-500">التعامل مع مجموعة مربعات اختيار (checkbox).</p>
     </header>
 
-    <div class="card">
-      <label class="check"><input type="checkbox" id="selectAll"> <b>تحديد الكل</b></label>
-      <hr>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4">
+      <label class="flex items-center gap-2 py-1 cursor-pointer font-bold"><input type="checkbox" id="selectAll"> تحديد الكل</label>
+      <hr class="my-2 border-slate-200">
       <div id="checkList">
-        <label class="check"><input type="checkbox" class="item-check"> HTML</label>
-        <label class="check"><input type="checkbox" class="item-check"> CSS</label>
-        <label class="check"><input type="checkbox" class="item-check"> Tailwind</label>
-        <label class="check"><input type="checkbox" class="item-check"> JavaScript</label>
-        <label class="check"><input type="checkbox" class="item-check"> API</label>
+        <label class="flex items-center gap-2 py-1 cursor-pointer"><input type="checkbox" class="item-check"> HTML</label>
+        <label class="flex items-center gap-2 py-1 cursor-pointer"><input type="checkbox" class="item-check"> CSS</label>
+        <label class="flex items-center gap-2 py-1 cursor-pointer"><input type="checkbox" class="item-check"> Tailwind</label>
+        <label class="flex items-center gap-2 py-1 cursor-pointer"><input type="checkbox" class="item-check"> JavaScript</label>
+        <label class="flex items-center gap-2 py-1 cursor-pointer"><input type="checkbox" class="item-check"> API</label>
       </div>
-      <p id="selectedCount" class="muted small">المحدد: 0</p>
-      <div class="row">
-        <button id="deleteSelectedBtn" class="btn-danger">حذف المحدد</button>
+      <p id="selectedCount" class="text-slate-500 text-sm mt-2">المحدد: 0</p>
+      <div class="flex flex-wrap items-center gap-2 mt-3">
+        <button id="deleteSelectedBtn" class="px-4 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700 transition cursor-pointer">حذف المحدد</button>
       </div>
     </div>
   </main>

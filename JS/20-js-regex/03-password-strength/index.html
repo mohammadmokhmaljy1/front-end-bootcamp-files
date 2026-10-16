@@ -4,30 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>قوة كلمة المرور</title>
-  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- Tailwind عبر CDN: مناسب للتعلّم والتجربة فقط -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
   <script src="script.js" defer></script>
 </head>
-<body>
-  <main class="container">
-    <header class="page-head">
-      <span class="badge">الدرس 20 · التمرين 3</span>
-      <h1>قوة كلمة المرور</h1>
-      <p class="goal">استخدام عدة تعابير نمطية لتقييم كلمة المرور.</p>
+<body class="bg-slate-100 text-slate-800">
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-16">
+    <header class="mb-5">
+      <span class="inline-block bg-blue-600 text-white text-xs px-3 py-0.5 rounded-full">الدرس 20 · التمرين 3</span>
+      <h1 class="text-2xl font-bold mt-2 mb-1">قوة كلمة المرور</h1>
+      <p class="text-slate-500">استخدام عدة تعابير نمطية لتقييم كلمة المرور.</p>
     </header>
 
-    <div class="card">
-      <label for="passwordInput">كلمة المرور</label>
-      <input type="password" id="passwordInput" placeholder="اكتب كلمة مرور...">
-      <label class="check"><input type="checkbox" id="showPassword"> إظهار كلمة المرور</label>
-      <div class="strength"><div id="strengthBar" class="strength-bar"></div></div>
-      <p id="strengthText" class="muted small">القوة: —</p>
-      <ul class="rules">
-        <li id="rule-length">8 أحرف على الأقل</li>
-        <li id="rule-upper">حرف كبير (A-Z)</li>
-        <li id="rule-lower">حرف صغير (a-z)</li>
-        <li id="rule-number">رقم واحد على الأقل</li>
-        <li id="rule-symbol">رمز خاص مثل ! @ # $</li>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4">
+      <label for="passwordInput" class="block font-semibold mt-3 mb-1">كلمة المرور</label>
+      <input type="password" id="passwordInput" placeholder="اكتب كلمة مرور..." class="w-full px-3 py-2 rounded-lg border border-slate-300 bg-white focus:outline-2 focus:outline-blue-600">
+      <label class="flex items-center gap-2 py-1 cursor-pointer"><input type="checkbox" id="showPassword"> إظهار كلمة المرور</label>
+      <div class="h-2.5 bg-slate-200 rounded-full overflow-hidden mt-3">
+        <div id="strengthBar" class="h-full w-0 bg-red-500 transition-all duration-300"></div>
+      </div>
+      <p id="strengthText" class="text-slate-500 text-sm mt-1">القوة: —</p>
+      <ul class="mt-3 space-y-1">
+        <li id="rule-length" class="text-slate-500"><span>✗</span> 8 أحرف على الأقل</li>
+        <li id="rule-upper" class="text-slate-500"><span>✗</span> حرف كبير (A-Z)</li>
+        <li id="rule-lower" class="text-slate-500"><span>✗</span> حرف صغير (a-z)</li>
+        <li id="rule-number" class="text-slate-500"><span>✗</span> رقم واحد على الأقل</li>
+        <li id="rule-symbol" class="text-slate-500"><span>✗</span> رمز خاص مثل ! @ # $</li>
       </ul>
     </div>
   </main>

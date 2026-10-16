@@ -4,23 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>تبويبات (Tabs)</title>
-  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- Tailwind عبر CDN: مناسب للتعلّم والتجربة فقط -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
   <script src="script.js" defer></script>
 </head>
-<body>
-  <main class="container">
-    <header class="page-head">
-      <span class="badge">الدرس 22 · التمرين 2</span>
-      <h1>تبويبات (Tabs)</h1>
-      <p class="goal">بناء تبويبات باستخدام عدة أزرار وعدة محتويات.</p>
+<body class="bg-slate-100 text-slate-800">
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-16">
+    <header class="mb-5">
+      <span class="inline-block bg-blue-600 text-white text-xs px-3 py-0.5 rounded-full">الدرس 22 · التمرين 2</span>
+      <h1 class="text-2xl font-bold mt-2 mb-1">تبويبات (Tabs)</h1>
+      <p class="text-slate-500">بناء تبويبات باستخدام عدة أزرار وعدة محتويات.</p>
     </header>
 
-    <div class="card">
-      <div class="tabs">
-        <button class="tab-btn active" data-tab="tab1">نبذة</button>
-        <button class="tab-btn" data-tab="tab2">المحتوى</button>
-        <button class="tab-btn" data-tab="tab3">التواصل</button>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4">
+      <div class="flex flex-wrap gap-1 border-b-2 border-slate-200 mb-4">
+        <button class="tab-btn px-4 py-2 -mb-0.5 border-b-4 border-blue-600 text-blue-600 font-bold cursor-pointer" data-tab="tab1">نبذة</button>
+        <button class="tab-btn px-4 py-2 -mb-0.5 border-b-4 border-transparent cursor-pointer" data-tab="tab2">المحتوى</button>
+        <button class="tab-btn px-4 py-2 -mb-0.5 border-b-4 border-transparent cursor-pointer" data-tab="tab3">التواصل</button>
       </div>
       <div id="tab1" class="tab-panel"><p>معسكر Frontend من DEVMMND يأخذك من الصفر حتى بناء مواقع كاملة.</p></div>
       <div id="tab2" class="tab-panel hidden"><p>نبدأ بـ HTML و CSS ثم Tailwind ثم JavaScript والتعامل مع الـ API.</p></div>

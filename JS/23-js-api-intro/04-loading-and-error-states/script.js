@@ -6,7 +6,7 @@
 // 2) goodBtn يجلب رابطاً صحيحاً: https://jsonplaceholder.typicode.com/posts/1
 // 3) badBtn يجلب رابطاً خاطئاً: https://jsonplaceholder.typicode.com/postss/1 (سيعطي 404)
 // 4) تحقق من response.ok وارمِ Error إذا فشل الطلب (fetch لا يرمي خطأً مع 404 تلقائياً)
-// 5) اعرض رسالة النجاح (ok) أو الخطأ (error) في status، وأخفِ loader في finally
+// 5) اعرض رسالة النجاح (bg-green-100 text-green-800) أو الخطأ (bg-red-100 text-red-800) في status، وأخفِ loader في finally
 //
 // اكتب الكود أسفل هذا السطر
 // -----------------------------------------------------

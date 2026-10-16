@@ -5,7 +5,7 @@
 // 1) امنع الإرسال الافتراضي للنموذج بـ event.preventDefault()
 // 2) اقرأ قيم titleInput و bodyInput
 // 3) أرسلها إلى https://jsonplaceholder.typicode.com/posts بـ fetch وطريقة POST مع الترويسة Content-Type: application/json وجسم JSON.stringify
-// 4) اعرض رد الخادم (فيه id الجديد) في responseOutput وأظهر البطاقة result
+// 4) اعرض رد الخادم (فيه id الجديد) في responseOutput وأظهر البطاقة result (أزل hidden)
 // 5) عطّل زر الإرسال أثناء الطلب وأعده بعده
 //
 // اكتب الكود أسفل هذا السطر

@@ -4,27 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مؤقّت عدّ تنازلي</title>
-  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- Tailwind عبر CDN: مناسب للتعلّم والتجربة فقط -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
   <script src="script.js" defer></script>
 </head>
-<body>
-  <main class="container">
-    <header class="page-head">
-      <span class="badge">الدرس 21 · التمرين 2</span>
-      <h1>مؤقّت عدّ تنازلي</h1>
-      <p class="goal">بناء عدّاد تنازلي يمكن إيقافه وإعادته.</p>
+<body class="bg-slate-100 text-slate-800">
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-16">
+    <header class="mb-5">
+      <span class="inline-block bg-blue-600 text-white text-xs px-3 py-0.5 rounded-full">الدرس 21 · التمرين 2</span>
+      <h1 class="text-2xl font-bold mt-2 mb-1">مؤقّت عدّ تنازلي</h1>
+      <p class="text-slate-500">بناء عدّاد تنازلي يمكن إيقافه وإعادته.</p>
     </header>
 
-    <div class="card center">
-      <div id="countdown" class="clock">00:10</div>
-      <div class="row center">
-        <input type="number" id="secondsInput" value="10" min="1" aria-label="عدد الثواني">
-        <button id="startBtn" class="btn-primary">ابدأ</button>
-        <button id="pauseBtn">إيقاف مؤقت</button>
-        <button id="resetBtn" class="btn-ghost">إعادة</button>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4 text-center">
+      <div id="countdown" dir="ltr" class="font-mono text-6xl font-bold tracking-wider">00:10</div>
+      <div class="flex flex-wrap justify-center items-center gap-2 mt-4">
+        <input type="number" id="secondsInput" value="10" min="1" aria-label="عدد الثواني" class="w-24 px-3 py-2 rounded-lg border border-slate-300 text-center">
+        <button id="startBtn" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">ابدأ</button>
+        <button id="pauseBtn" class="px-4 py-2 rounded-lg border border-slate-300 bg-white hover:border-blue-600 hover:text-blue-600 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">إيقاف مؤقت</button>
+        <button id="resetBtn" class="px-4 py-2 rounded-lg border border-slate-300 bg-white hover:border-blue-600 hover:text-blue-600 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">إعادة</button>
       </div>
-      <p id="finishMsg" class="msg ok hidden">انتهى الوقت!</p>
+      <p id="finishMsg" class="hidden mt-4 rounded-lg bg-green-100 text-green-800 px-3 py-2">انتهى الوقت!</p>
     </div>
   </main>
 </body>

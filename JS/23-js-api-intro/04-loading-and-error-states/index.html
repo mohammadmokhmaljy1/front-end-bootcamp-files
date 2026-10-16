@@ -4,26 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>حالات التحميل والخطأ</title>
-  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- Tailwind عبر CDN: مناسب للتعلّم والتجربة فقط -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
   <script src="script.js" defer></script>
 </head>
-<body>
-  <main class="container">
-    <header class="page-head">
-      <span class="badge">الدرس 23 · التمرين 4</span>
-      <h1>حالات التحميل والخطأ</h1>
-      <p class="goal">عرض حالة التحميل ومعالجة الأخطاء بشكل صحيح.</p>
+<body class="bg-slate-100 text-slate-800">
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-16">
+    <header class="mb-5">
+      <span class="inline-block bg-blue-600 text-white text-xs px-3 py-0.5 rounded-full">الدرس 23 · التمرين 4</span>
+      <h1 class="text-2xl font-bold mt-2 mb-1">حالات التحميل والخطأ</h1>
+      <p class="text-slate-500">عرض حالة التحميل ومعالجة الأخطاء بشكل صحيح.</p>
     </header>
 
-    <div class="card">
-      <div class="row">
-        <button id="goodBtn" class="btn-primary">طلب صحيح</button>
-        <button id="badBtn" class="btn-danger">طلب خاطئ (404)</button>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4">
+      <div class="flex flex-wrap items-center gap-2">
+        <button id="goodBtn" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">طلب صحيح</button>
+        <button id="badBtn" class="px-4 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700 transition cursor-pointer">طلب خاطئ (404)</button>
       </div>
-      <div id="loader" class="loader hidden"></div>
-      <p id="status" class="msg"></p>
-      <pre id="output" class="output">...</pre>
+      <div id="loader" class="hidden animate-spin rounded-full size-7 border-4 border-slate-200 border-t-blue-600 mx-auto my-3"></div>
+      <p id="status" class="empty:hidden mt-3 rounded-lg px-3 py-2"></p>
+      <pre id="output" dir="ltr" class="bg-slate-900 text-green-200 p-4 rounded-xl min-h-20 whitespace-pre-wrap font-mono text-sm text-left overflow-auto mt-3">...</pre>
     </div>
   </main>
 </body>

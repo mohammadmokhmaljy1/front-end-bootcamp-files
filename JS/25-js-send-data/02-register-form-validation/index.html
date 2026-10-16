@@ -4,41 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>نموذج تسجيل مع التحقق</title>
-  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- Tailwind عبر CDN: مناسب للتعلّم والتجربة فقط -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
   <script src="script.js" defer></script>
 </head>
-<body>
-  <main class="container">
-    <header class="page-head">
-      <span class="badge">الدرس 25 · التمرين 2</span>
-      <h1>نموذج تسجيل مع التحقق</h1>
-      <p class="goal">التحقق من الحقول قبل إرسالها.</p>
+<body class="bg-slate-100 text-slate-800">
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-16">
+    <header class="mb-5">
+      <span class="inline-block bg-blue-600 text-white text-xs px-3 py-0.5 rounded-full">الدرس 25 · التمرين 2</span>
+      <h1 class="text-2xl font-bold mt-2 mb-1">نموذج تسجيل مع التحقق</h1>
+      <p class="text-slate-500">التحقق من الحقول قبل إرسالها.</p>
     </header>
 
-    <div class="card">
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4">
       <form id="registerForm" novalidate>
-        <label for="nameInput">الاسم</label>
-        <input type="text" id="nameInput">
-        <small id="nameError" class="error-text"></small>
+        <label for="nameInput" class="block font-semibold mb-1">الاسم</label>
+        <input type="text" id="nameInput" class="w-full px-3 py-2 rounded-lg border border-slate-300 bg-white focus:outline-2 focus:outline-blue-600">
+        <small id="nameError" class="block min-h-5 text-red-600 text-sm"></small>
 
-        <label for="emailInput">البريد الإلكتروني</label>
-        <input type="email" id="emailInput">
-        <small id="emailError" class="error-text"></small>
+        <label for="emailInput" class="block font-semibold mt-3 mb-1">البريد الإلكتروني</label>
+        <input type="email" id="emailInput" class="w-full px-3 py-2 rounded-lg border border-slate-300 bg-white focus:outline-2 focus:outline-blue-600">
+        <small id="emailError" class="block min-h-5 text-red-600 text-sm"></small>
 
-        <label for="passwordInput">كلمة المرور</label>
-        <input type="password" id="passwordInput">
-        <small id="passwordError" class="error-text"></small>
+        <label for="passwordInput" class="block font-semibold mt-3 mb-1">كلمة المرور</label>
+        <input type="password" id="passwordInput" class="w-full px-3 py-2 rounded-lg border border-slate-300 bg-white focus:outline-2 focus:outline-blue-600">
+        <small id="passwordError" class="block min-h-5 text-red-600 text-sm"></small>
 
-        <label for="confirmInput">تأكيد كلمة المرور</label>
-        <input type="password" id="confirmInput">
-        <small id="confirmError" class="error-text"></small>
+        <label for="confirmInput" class="block font-semibold mt-3 mb-1">تأكيد كلمة المرور</label>
+        <input type="password" id="confirmInput" class="w-full px-3 py-2 rounded-lg border border-slate-300 bg-white focus:outline-2 focus:outline-blue-600">
+        <small id="confirmError" class="block min-h-5 text-red-600 text-sm"></small>
 
-        <div class="row">
-          <button type="submit" class="btn-primary">إنشاء حساب</button>
+        <div class="flex flex-wrap items-center gap-2 mt-3">
+          <button type="submit" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">إنشاء حساب</button>
         </div>
       </form>
-      <p id="status" class="msg"></p>
+      <p id="status" class="empty:hidden mt-3 rounded-lg px-3 py-2"></p>
     </div>
   </main>
 </body>

@@ -4,28 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>async/await: بطاقة مستخدم</title>
-  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- Tailwind عبر CDN: مناسب للتعلّم والتجربة فقط -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
   <script src="script.js" defer></script>
 </head>
-<body>
-  <main class="container">
-    <header class="page-head">
-      <span class="badge">الدرس 23 · التمرين 3</span>
-      <h1>async/await: بطاقة مستخدم</h1>
-      <p class="goal">استخدام async/await لجلب مستخدم وعرضه في بطاقة.</p>
+<body class="bg-slate-100 text-slate-800">
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-16">
+    <header class="mb-5">
+      <span class="inline-block bg-blue-600 text-white text-xs px-3 py-0.5 rounded-full">الدرس 23 · التمرين 3</span>
+      <h1 class="text-2xl font-bold mt-2 mb-1">async/await: بطاقة مستخدم</h1>
+      <p class="text-slate-500">استخدام async/await لجلب مستخدم وعرضه في بطاقة.</p>
     </header>
 
-    <div class="card">
-      <div class="row">
-        <input type="number" id="userId" value="1" min="1" max="10" aria-label="رقم المستخدم">
-        <button id="loadBtn" class="btn-primary">تحميل المستخدم</button>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4">
+      <div class="flex flex-wrap items-center gap-2">
+        <input type="number" id="userId" value="1" min="1" max="10" aria-label="رقم المستخدم" class="flex-1 min-w-40 px-3 py-2 rounded-lg border border-slate-300 bg-white focus:outline-2 focus:outline-blue-600">
+        <button id="loadBtn" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">تحميل المستخدم</button>
       </div>
     </div>
-    <div class="card user-card">
-      <h2 id="userName">—</h2>
-      <p id="userEmail" class="muted">—</p>
-      <p>الهاتف: <span id="userPhone">—</span></p>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4 text-center max-w-sm mx-auto">
+      <h2 id="userName" class="text-xl font-bold">—</h2>
+      <p id="userEmail" class="text-slate-500">—</p>
+      <p class="mt-2">الهاتف: <span id="userPhone">—</span></p>
       <p>الشركة: <span id="userCompany">—</span></p>
       <p>المدينة: <span id="userCity">—</span></p>
     </div>

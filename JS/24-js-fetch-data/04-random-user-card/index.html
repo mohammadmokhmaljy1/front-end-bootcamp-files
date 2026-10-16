@@ -4,27 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>بطاقة مستخدم عشوائي</title>
-  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- Tailwind عبر CDN: مناسب للتعلّم والتجربة فقط -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
   <script src="script.js" defer></script>
 </head>
-<body>
-  <main class="container">
-    <header class="page-head">
-      <span class="badge">الدرس 24 · التمرين 4</span>
-      <h1>بطاقة مستخدم عشوائي</h1>
-      <p class="goal">جلب بيانات مختلفة في كل مرة وتحديث الواجهة.</p>
+<body class="bg-slate-100 text-slate-800">
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-16">
+    <header class="mb-5">
+      <span class="inline-block bg-blue-600 text-white text-xs px-3 py-0.5 rounded-full">الدرس 24 · التمرين 4</span>
+      <h1 class="text-2xl font-bold mt-2 mb-1">بطاقة مستخدم عشوائي</h1>
+      <p class="text-slate-500">جلب بيانات مختلفة في كل مرة وتحديث الواجهة.</p>
     </header>
 
-    <div class="card user-card">
-      <div id="avatar" class="avatar">؟</div>
-      <h2 id="userName">اضغط على الزر</h2>
-      <p id="userEmail" class="muted">—</p>
-      <p>الشركة: <span id="userCompany">—</span></p>
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-4 text-center max-w-sm mx-auto">
+      <div id="avatar" class="size-20 rounded-full bg-blue-600 text-white text-3xl font-bold flex items-center justify-center mx-auto mb-3">؟</div>
+      <h2 id="userName" class="text-xl font-bold">اضغط على الزر</h2>
+      <p id="userEmail" class="text-slate-500">—</p>
+      <p class="mt-2">الشركة: <span id="userCompany">—</span></p>
       <p>المدينة: <span id="userCity">—</span></p>
       <p>الموقع: <span id="userWebsite">—</span></p>
-      <div class="row center">
-        <button id="randomBtn" class="btn-primary">مستخدم عشوائي</button>
+      <div class="flex justify-center mt-4">
+        <button id="randomBtn" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">مستخدم عشوائي</button>
       </div>
     </div>
   </main>
