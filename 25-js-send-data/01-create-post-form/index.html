@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إرسال نموذج: إنشاء مقال</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 25 · التمرين 1</span>
+      <h1>إرسال نموذج: إنشاء مقال</h1>
+      <p class="goal">إرسال بيانات نموذج إلى الخادم بطلب POST.</p>
+    </header>
+
+    <div class="card">
+      <form id="postForm">
+        <label for="titleInput">عنوان المقال</label>
+        <input type="text" id="titleInput" placeholder="اكتب العنوان" required>
+        <label for="bodyInput">المحتوى</label>
+        <textarea id="bodyInput" placeholder="اكتب المحتوى" required></textarea>
+        <div class="row">
+          <button type="submit" id="submitBtn" class="btn-primary">إرسال</button>
+        </div>
+      </form>
+    </div>
+    <div id="result" class="card hidden">
+      <h2>رد الخادم</h2>
+      <pre id="responseOutput" class="output"></pre>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رسالة تظهر بعد تأخير</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 21 · التمرين 4</span>
+      <h1>رسالة تظهر بعد تأخير</h1>
+      <p class="goal">استخدام setTimeout و clearTimeout.</p>
+    </header>
+
+    <div class="card">
+      <div class="row">
+        <button id="showBtn" class="btn-primary">أظهر رسالة</button>
+        <button id="saveBtn">حفظ</button>
+      </div>
+      <p id="saveStatus" class="msg info"></p>
+    </div>
+    <div id="toast" class="toast hidden">مرحباً! هذه رسالة مؤقتة 👋</div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بحث مباشر في المستخدمين</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 24 · التمرين 3</span>
+      <h1>بحث مباشر في المستخدمين</h1>
+      <p class="goal">جلب البيانات مرة واحدة ثم فلترتها أثناء الكتابة.</p>
+    </header>
+
+    <div class="card">
+      <input type="text" id="searchInput" placeholder="ابحث بالاسم أو البريد...">
+      <p id="resultCount" class="muted small"></p>
+      <ul id="usersList" class="plain-list"></ul>
+      <p id="noResult" class="msg info hidden">لا توجد نتائج مطابقة.</p>
+    </div>
+  </main>
+</body>
+</html>

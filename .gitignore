@@ -1,0 +1,7 @@
+# يتم توليدها محلياً على جهاز كل طالب بواسطة setup.bat
+desktop.ini
+folder.ico
+
+Thumbs.db
+.DS_Store
+node_modules/

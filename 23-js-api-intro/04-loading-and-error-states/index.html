@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حالات التحميل والخطأ</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 23 · التمرين 4</span>
+      <h1>حالات التحميل والخطأ</h1>
+      <p class="goal">عرض حالة التحميل ومعالجة الأخطاء بشكل صحيح.</p>
+    </header>
+
+    <div class="card">
+      <div class="row">
+        <button id="goodBtn" class="btn-primary">طلب صحيح</button>
+        <button id="badBtn" class="btn-danger">طلب خاطئ (404)</button>
+      </div>
+      <div id="loader" class="loader hidden"></div>
+      <p id="status" class="msg"></p>
+      <pre id="output" class="output">...</pre>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مؤقّت عدّ تنازلي</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 21 · التمرين 2</span>
+      <h1>مؤقّت عدّ تنازلي</h1>
+      <p class="goal">بناء عدّاد تنازلي يمكن إيقافه وإعادته.</p>
+    </header>
+
+    <div class="card center">
+      <div id="countdown" class="clock">00:10</div>
+      <div class="row center">
+        <input type="number" id="secondsInput" value="10" min="1" aria-label="عدد الثواني">
+        <button id="startBtn" class="btn-primary">ابدأ</button>
+        <button id="pauseBtn">إيقاف مؤقت</button>
+        <button id="resetBtn" class="btn-ghost">إعادة</button>
+      </div>
+      <p id="finishMsg" class="msg ok hidden">انتهى الوقت!</p>
+    </div>
+  </main>
+</body>
+</html>

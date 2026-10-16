@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فلترة المعرض حسب التصنيف</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 22 · التمرين 3</span>
+      <h1>فلترة المعرض حسب التصنيف</h1>
+      <p class="goal">إظهار وإخفاء مجموعة عناصر حسب خاصية data-category.</p>
+    </header>
+
+    <div class="card">
+      <div class="row">
+        <button class="filter-btn active" data-filter="all">الكل</button>
+        <button class="filter-btn" data-filter="nature">طبيعة</button>
+        <button class="filter-btn" data-filter="city">مدن</button>
+        <button class="filter-btn" data-filter="food">طعام</button>
+      </div>
+      <p id="visibleCount" class="muted small">عدد الصور الظاهرة: 9</p>
+      <div class="gallery">
+        <div class="photo" data-category="nature">غابة</div>
+        <div class="photo" data-category="city">برج</div>
+        <div class="photo" data-category="food">بيتزا</div>
+        <div class="photo" data-category="nature">جبل</div>
+        <div class="photo" data-category="city">جسر</div>
+        <div class="photo" data-category="food">فاكهة</div>
+        <div class="photo" data-category="nature">بحيرة</div>
+        <div class="photo" data-category="city">شارع</div>
+        <div class="photo" data-category="food">حلويات</div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

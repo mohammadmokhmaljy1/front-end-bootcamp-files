@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تحديد الكل وعدّ المحدَّد</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 22 · التمرين 4</span>
+      <h1>تحديد الكل وعدّ المحدَّد</h1>
+      <p class="goal">التعامل مع مجموعة مربعات اختيار (checkbox).</p>
+    </header>
+
+    <div class="card">
+      <label class="check"><input type="checkbox" id="selectAll"> <b>تحديد الكل</b></label>
+      <hr>
+      <div id="checkList">
+        <label class="check"><input type="checkbox" class="item-check"> HTML</label>
+        <label class="check"><input type="checkbox" class="item-check"> CSS</label>
+        <label class="check"><input type="checkbox" class="item-check"> Tailwind</label>
+        <label class="check"><input type="checkbox" class="item-check"> JavaScript</label>
+        <label class="check"><input type="checkbox" class="item-check"> API</label>
+      </div>
+      <p id="selectedCount" class="muted small">المحدد: 0</p>
+      <div class="row">
+        <button id="deleteSelectedBtn" class="btn-danger">حذف المحدد</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بطاقة مستخدم عشوائي</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 24 · التمرين 4</span>
+      <h1>بطاقة مستخدم عشوائي</h1>
+      <p class="goal">جلب بيانات مختلفة في كل مرة وتحديث الواجهة.</p>
+    </header>
+
+    <div class="card user-card">
+      <div id="avatar" class="avatar">؟</div>
+      <h2 id="userName">اضغط على الزر</h2>
+      <p id="userEmail" class="muted">—</p>
+      <p>الشركة: <span id="userCompany">—</span></p>
+      <p>المدينة: <span id="userCity">—</span></p>
+      <p>الموقع: <span id="userWebsite">—</span></p>
+      <div class="row center">
+        <button id="randomBtn" class="btn-primary">مستخدم عشوائي</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

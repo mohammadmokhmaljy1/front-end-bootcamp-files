@@ -1,0 +1,6 @@
+#!/bin/sh
+# Re-applies folder icons after git pull / checkout (Windows only).
+if command -v powershell.exe >/dev/null 2>&1; then
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -File "_tools/apply-icons.ps1" >/dev/null 2>&1
+fi
+exit 0

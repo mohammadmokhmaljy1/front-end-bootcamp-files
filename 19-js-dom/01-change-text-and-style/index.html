@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تغيير النص والشكل</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 19 · التمرين 1</span>
+      <h1>تغيير النص والشكل</h1>
+      <p class="goal">تحديد عناصر الصفحة وتغيير نصها وتنسيقها.</p>
+    </header>
+
+    <div class="card">
+      <h2 id="title">مرحباً بك في الدرس</h2>
+      <p id="description" class="muted">هذا نص تجريبي سنغيّره باستخدام JavaScript.</p>
+      <div id="box" class="demo-box">أنا صندوق قابل للتغيير</div>
+      <div class="row">
+        <button id="changeTextBtn" class="btn-primary">غيّر النص</button>
+        <button id="changeStyleBtn">غيّر الشكل</button>
+        <button id="resetBtn" class="btn-ghost">إعادة</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

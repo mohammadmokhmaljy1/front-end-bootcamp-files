@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إظهار وإخفاء: الأسئلة الشائعة</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 19 · التمرين 2</span>
+      <h1>إظهار وإخفاء: الأسئلة الشائعة</h1>
+      <p class="goal">التحكم بظهور العناصر عند الضغط على زر.</p>
+    </header>
+
+    <div class="card">
+      <div class="faq-item">
+        <button class="faq-question" data-target="answer1">ما هي لغة HTML؟</button>
+        <p id="answer1" class="faq-answer hidden">لغة ترميز تبني هيكل صفحات الويب وعناصرها.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" data-target="answer2">ما الفرق بين CSS و JavaScript؟</button>
+        <p id="answer2" class="faq-answer hidden">CSS تنسّق شكل الصفحة، أما JavaScript فتضيف التفاعل والمنطق.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" data-target="answer3">هل أحتاج إلى حفظ كل الأكواد؟</button>
+        <p id="answer3" class="faq-answer hidden">لا، المهم فهم الأفكار والتدرّب كثيراً، والمراجع موجودة دائماً.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

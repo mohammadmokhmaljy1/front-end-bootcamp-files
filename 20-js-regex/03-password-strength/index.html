@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قوة كلمة المرور</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 20 · التمرين 3</span>
+      <h1>قوة كلمة المرور</h1>
+      <p class="goal">استخدام عدة تعابير نمطية لتقييم كلمة المرور.</p>
+    </header>
+
+    <div class="card">
+      <label for="passwordInput">كلمة المرور</label>
+      <input type="password" id="passwordInput" placeholder="اكتب كلمة مرور...">
+      <label class="check"><input type="checkbox" id="showPassword"> إظهار كلمة المرور</label>
+      <div class="strength"><div id="strengthBar" class="strength-bar"></div></div>
+      <p id="strengthText" class="muted small">القوة: —</p>
+      <ul class="rules">
+        <li id="rule-length">8 أحرف على الأقل</li>
+        <li id="rule-upper">حرف كبير (A-Z)</li>
+        <li id="rule-lower">حرف صغير (a-z)</li>
+        <li id="rule-number">رقم واحد على الأقل</li>
+        <li id="rule-symbol">رمز خاص مثل ! @ # $</li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>

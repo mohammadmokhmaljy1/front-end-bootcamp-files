@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نموذج تسجيل مع التحقق</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 25 · التمرين 2</span>
+      <h1>نموذج تسجيل مع التحقق</h1>
+      <p class="goal">التحقق من الحقول قبل إرسالها.</p>
+    </header>
+
+    <div class="card">
+      <form id="registerForm" novalidate>
+        <label for="nameInput">الاسم</label>
+        <input type="text" id="nameInput">
+        <small id="nameError" class="error-text"></small>
+
+        <label for="emailInput">البريد الإلكتروني</label>
+        <input type="email" id="emailInput">
+        <small id="emailError" class="error-text"></small>
+
+        <label for="passwordInput">كلمة المرور</label>
+        <input type="password" id="passwordInput">
+        <small id="passwordError" class="error-text"></small>
+
+        <label for="confirmInput">تأكيد كلمة المرور</label>
+        <input type="password" id="confirmInput">
+        <small id="confirmError" class="error-text"></small>
+
+        <div class="row">
+          <button type="submit" class="btn-primary">إنشاء حساب</button>
+        </div>
+      </form>
+      <p id="status" class="msg"></p>
+    </div>
+  </main>
+</body>
+</html>

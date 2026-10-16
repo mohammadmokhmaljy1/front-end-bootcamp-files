@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>التحقق من البريد الإلكتروني</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 20 · التمرين 1</span>
+      <h1>التحقق من البريد الإلكتروني</h1>
+      <p class="goal">كتابة تعبير نمطي (RegEx) للتحقق من الإيميل.</p>
+    </header>
+
+    <div class="card">
+      <label for="emailInput">البريد الإلكتروني</label>
+      <input type="email" id="emailInput" placeholder="name@example.com">
+      <div class="row">
+        <button id="checkBtn" class="btn-primary">تحقق</button>
+      </div>
+      <p id="message" class="msg"></p>
+    </div>
+  </main>
+</body>
+</html>

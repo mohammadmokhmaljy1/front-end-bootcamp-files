@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>التحقق من رقم الهاتف السوري</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 20 · التمرين 2</span>
+      <h1>التحقق من رقم الهاتف السوري</h1>
+      <p class="goal">التحقق من أكثر من صيغة لرقم الهاتف.</p>
+    </header>
+
+    <div class="card">
+      <label for="phoneInput">رقم الهاتف</label>
+      <input type="tel" id="phoneInput" placeholder="0933 123 456">
+      <p class="muted small">أمثلة صحيحة: <code>0933123456</code> — <code>+963933123456</code> — <code>00963933123456</code></p>
+      <div class="row">
+        <button id="checkBtn" class="btn-primary">تحقق</button>
+      </div>
+      <p id="message" class="msg"></p>
+    </div>
+  </main>
+</body>
+</html>

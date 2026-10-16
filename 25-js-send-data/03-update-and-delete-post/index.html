@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تعديل وحذف مقال (PUT / PATCH / DELETE)</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 25 · التمرين 3</span>
+      <h1>تعديل وحذف مقال (PUT / PATCH / DELETE)</h1>
+      <p class="goal">التعرّف على طرق HTTP: GET و PUT و PATCH و DELETE.</p>
+    </header>
+
+    <div class="card">
+      <label for="editTitle">العنوان</label>
+      <input type="text" id="editTitle">
+      <label for="editBody">المحتوى</label>
+      <textarea id="editBody"></textarea>
+      <div class="row">
+        <button id="loadBtn" class="btn-primary">تحميل (GET)</button>
+        <button id="updateBtn">تعديل كامل (PUT)</button>
+        <button id="patchBtn">تعديل العنوان (PATCH)</button>
+        <button id="deleteBtn" class="btn-danger">حذف (DELETE)</button>
+      </div>
+    </div>
+    <div class="card">
+      <h2>سجل الطلبات</h2>
+      <pre id="log" class="output">...</pre>
+    </div>
+  </main>
+</body>
+</html>

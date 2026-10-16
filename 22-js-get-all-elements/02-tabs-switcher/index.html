@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تبويبات (Tabs)</title>
+  <link rel="stylesheet" href="../../shared/exercise.css">
+  <!-- defer: يجعل المتصفح ينفّذ السكربت بعد تحميل عناصر الصفحة بالكامل -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <span class="badge">الدرس 22 · التمرين 2</span>
+      <h1>تبويبات (Tabs)</h1>
+      <p class="goal">بناء تبويبات باستخدام عدة أزرار وعدة محتويات.</p>
+    </header>
+
+    <div class="card">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="tab1">نبذة</button>
+        <button class="tab-btn" data-tab="tab2">المحتوى</button>
+        <button class="tab-btn" data-tab="tab3">التواصل</button>
+      </div>
+      <div id="tab1" class="tab-panel"><p>معسكر Frontend من DEVMMND يأخذك من الصفر حتى بناء مواقع كاملة.</p></div>
+      <div id="tab2" class="tab-panel hidden"><p>نبدأ بـ HTML و CSS ثم Tailwind ثم JavaScript والتعامل مع الـ API.</p></div>
+      <div id="tab3" class="tab-panel hidden"><p>للاستفسار تواصل مع إدارة المعسكر عبر وسائل التواصل المعتمدة.</p></div>
+    </div>
+  </main>
+</body>
+</html>
