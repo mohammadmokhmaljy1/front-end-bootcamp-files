@@ -9,6 +9,29 @@ $iconsDir = Join-Path $toolsDir 'icons'
 if (-not (Test-Path -LiteralPath $manifest)) { Write-Host 'folders.json not found.'; exit 1 }
 $map = Get-Content -LiteralPath $manifest -Raw -Encoding UTF8 | ConvertFrom-Json
 
+# Remove leftover folders from an older layout: after a rename, git leaves behind
+# folders that only contain our hidden icon files. Folders with real files are never touched.
+try {
+    $keep = @{}
+    foreach ($entry in $map.PSObject.Properties) {
+        $keep[(Join-Path $root ($entry.Name -replace '/', '\')).TrimEnd('\').ToLower()] = $true
+    }
+    $allDirs = Get-ChildItem -LiteralPath $root -Directory -Recurse -Force |
+        Where-Object { $_.FullName -notmatch '\\\.git(\\|$)' } |
+        Sort-Object { $_.FullName.Length } -Descending
+    foreach ($d in $allDirs) {
+        if ($keep.ContainsKey($d.FullName.TrimEnd('\').ToLower())) { continue }
+        if (-not (Test-Path -LiteralPath $d.FullName)) { continue }
+        $items = @(Get-ChildItem -LiteralPath $d.FullName -Force)
+        $real  = @($items | Where-Object { $_.Name -ne 'desktop.ini' -and $_.Name -ne 'folder.ico' })
+        if ($real.Count -eq 0) {
+            foreach ($i in $items) { [System.IO.File]::SetAttributes($i.FullName, [System.IO.FileAttributes]::Normal) }
+            [System.IO.File]::SetAttributes($d.FullName, [System.IO.FileAttributes]::Directory)
+            Remove-Item -LiteralPath $d.FullName -Recurse -Force -ErrorAction SilentlyContinue
+        }
+    }
+} catch { }
+
 $applied = 0
 $skipped = 0
 foreach ($entry in $map.PSObject.Properties) {
